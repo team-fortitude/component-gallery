@@ -12,7 +12,16 @@ class App extends Component {
         const header = new Header();
         const headerDOM = header.render();
 
-        const imageList = new ImageList({ images });
+        const imageList = new ImageList({ 
+            images,
+            onRemove: (imageToRemove) => {
+                const index = images.indexOf(imageToRemove);
+
+                images.splice(index, 1);
+                imageList.update({ images });
+            }
+        });
+
         const imageListDOM = imageList.render();
 
         const addImage = new AddImage({

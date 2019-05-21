@@ -5,10 +5,11 @@ class ImageList extends Component {
     
     render() {
         const list = this.renderDOM();
+        const onRemove = this.props.onRemove;
 
         const images = this.props.images;
         images.forEach(image => {
-            const imageItem = new ImageItem({ image });
+            const imageItem = new ImageItem({ image, onRemove });
             const imageItemDOM = imageItem.render();
 
             list.appendChild(imageItemDOM);
