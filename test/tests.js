@@ -1,12 +1,3 @@
-const test = QUnit.test;
-
-test('time to test a function', function(assert) {
-    //Arrange
-    // Set up your parameters and expectations
-
-    //Act 
-    // Call the function you're testing and set the result to a const
-
-    //Assert
-    assert.equal(true, true);
-});
+import './html-equal.js';
+import './html-equal.test.js';
+import './html-to-DOM.test.js';
