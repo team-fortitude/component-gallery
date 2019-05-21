@@ -2,19 +2,19 @@ header {
     text-align: center;
 }
 
-#images {
+ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 15px;
 }
 
-#images li {
+ul li {
     list-style: none;
     text-align: center;
 }
 
-#images li img {
+ul li img {
     height: 250px;
     width: 250px;
 }
