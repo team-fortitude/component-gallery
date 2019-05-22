@@ -20,7 +20,7 @@ class ImageItem extends Component {
             <li class="image">
                 <h2>${image.title}</h2>
                 <img src="${image.url}" alt="${image.description}">
-                <button>x</button>
+                <button id="remove">x</button>
             </li>
         `;
     }
