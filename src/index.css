@@ -1,0 +1,32 @@
+header {
+    text-align: center;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 15px;
+}
+
+ul li {
+    list-style: none;
+    text-align: center;
+    position: relative;
+}
+
+ul li img {
+    height: 250px;
+    width: 250px;
+}
+
+#remove {
+    background-color: pink;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+main {
+    text-align: center;
+}
