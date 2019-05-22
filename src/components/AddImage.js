@@ -29,13 +29,13 @@ class AddImage extends Component {
         return /*html*/`
             <form>
                 <label>Image Title
-                    <input type="text" name="title">
+                    <input type="text" name="title" required>
                 </label>
                 <label>Description
-                    <input type="text" name="description">
+                    <input type="text" name="description" required>
                 </label>
                 <label>Link
-                    <input type="text" name="link">
+                    <input type="text" name="link" required>
                 </label>
                 <button>You know what to do</button>
             </form>
