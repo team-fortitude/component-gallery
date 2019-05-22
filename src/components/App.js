@@ -13,7 +13,11 @@ class App extends Component {
         const header = new Header();
         const headerDOM = header.render();
         
-        const filter = new Filter();
+        const filter = new Filter({
+            onFilter: (filter) => {
+                console.log(filter);
+            }
+        });
         const filterDOM = filter.render();
 
         const imageList = new ImageList({ 

@@ -5,8 +5,10 @@ class Filter extends Component {
         const dom = this.renderDOM();
         const input = dom.querySelector('input');
 
+        const onFilter = this.props.onFilter;
+
         input.addEventListener('input', () => {
-            console.log(input.value);
+            onFilter(input.value);
         });
 
         return dom;
