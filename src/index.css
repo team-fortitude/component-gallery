@@ -12,9 +12,21 @@ ul {
 ul li {
     list-style: none;
     text-align: center;
+    position: relative;
 }
 
 ul li img {
     height: 250px;
     width: 250px;
+}
+
+#remove {
+    background-color: pink;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+main {
+    text-align: center;
 }
