@@ -29,6 +29,7 @@ class AddImage extends Component {
     renderTemplate() {
         return /*html*/`
             <form>
+                <h3>Add Image!</h3>
                 <label>Image Title:
                     <input type="text" name="title" required>
                 </label>
