@@ -17,7 +17,7 @@ class Filter extends Component {
     renderTemplate() {
         return /*html*/`
         <section>
-            <input type="text" name="filter">
+            <input type="text" name="filter" placeholder="Search">
         </section>
         `;
     }
