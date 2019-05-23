@@ -39,6 +39,7 @@ class App extends Component {
             onAdd: newImage => {
                 images.unshift(newImage);
                 imageList.update({ images });
+                filter.update();
             }
         });
 
