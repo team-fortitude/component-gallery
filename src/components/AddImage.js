@@ -13,7 +13,8 @@ class AddImage extends Component {
             const newImage = {
                 url: formData.get('link'),
                 title: formData.get('title'),
-                description: formData.get('description')
+                description: formData.get('description'),
+                horns: formData.get('horns')
             };
 
             onAdd(newImage);
@@ -28,14 +29,18 @@ class AddImage extends Component {
     renderTemplate() {
         return /*html*/`
             <form>
-                <label>Image Title
+                <h3>Add Image!</h3>
+                <label>Image Title:
                     <input type="text" name="title" required>
                 </label>
-                <label>Description
+                <label>Description:
                     <input type="text" name="description" required>
                 </label>
-                <label>Link
+                <label>Link:
                     <input type="text" name="link" required>
+                </label>
+                <label>Horns:
+                    <input type="number" name="horns" required>
                 </label>
                 <button>You know what to do</button>
             </form>

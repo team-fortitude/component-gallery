@@ -3,6 +3,8 @@ import Header from './Header.js';
 import ImageList from './ImageList.js';
 import images from '../../data/images.js';
 import AddImage from './AddImage.js';
+import Filter from './Filter.js';
+import filterImages from '../filter-images.js';
 
 class App extends Component {
 
@@ -11,6 +13,15 @@ class App extends Component {
 
         const header = new Header();
         const headerDOM = header.render();
+        
+        const filter = new Filter({
+            onFilter: (filter) => {
+                const newImages = filterImages(filter, images);
+                imageList.update({ images: newImages });
+            }
+        });
+
+        const filterDOM = filter.render();
 
         const imageList = new ImageList({ 
             images,
@@ -28,11 +39,14 @@ class App extends Component {
             onAdd: newImage => {
                 images.unshift(newImage);
                 imageList.update({ images });
+                filter.update();
             }
         });
+
         const addImageDOM = addImage.render();
 
         const main = dom.querySelector('main');
+        main.appendChild(filterDOM);
 
         main.appendChild(addImageDOM);
 
