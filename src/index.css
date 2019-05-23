@@ -30,3 +30,14 @@ ul li img {
 main {
     text-align: center;
 }
+form {
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form label {
+    margin: 5px;
+}
