@@ -4,6 +4,7 @@ import ImageList from './ImageList.js';
 import images from '../../data/images.js';
 import AddImage from './AddImage.js';
 import Filter from './Filter.js';
+import filterImages from '../filter-images.js';
 
 class App extends Component {
 
@@ -15,9 +16,11 @@ class App extends Component {
         
         const filter = new Filter({
             onFilter: (filter) => {
-                console.log(filter);
+                const newImages = filterImages(filter, images);
+                imageList.update({ images: newImages });
             }
         });
+
         const filterDOM = filter.render();
 
         const imageList = new ImageList({ 
@@ -38,6 +41,7 @@ class App extends Component {
                 imageList.update({ images });
             }
         });
+
         const addImageDOM = addImage.render();
 
         const main = dom.querySelector('main');
